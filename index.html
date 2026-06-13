@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piaçaguera e Amparo: Sustentabilidade e Renda Caiçara</title>
+  
+  <!-- Tailwind CSS para um design moderno e limpo -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter para leitura limpa e Playfair Display para títulos elegantes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- FontAwesome para ícones intuitivos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            oceanBlue: '#0c4a6e',    /* Azul profundo do mar de Paranaguá */
+            mataGreen: '#065f46',    /* Verde rico da Mata Atlântica */
+            sandBeige: '#fef3c7',    /* Tom de areia quente e aconchegante */
+            caiçaraOrange: '#d97706'  /* Tom de brasa do defumador e calor humano */
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Estilos personalizados para transições suaves e efeitos específicos */
+    .btn-tab-active {
+      background-color: #0c4a6e;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(12, 74, 110, 0.2);
+    }
+    
+    /* Efeito de economia de dados para conexões das ilhas */
+    .eco-mode img {
+      filter: blur(8px) grayscale(50%);
+      transition: filter 0.3s;
+    }
+    .eco-mode .eco-hide {
+      display: none !important;
+    }
+    .eco-mode .eco-bg-glow {
+      background: none !important;
+    }
+  </style>
+</head>
+<body class="bg-amber-50/30 text-slate-800 font-sans min-h-screen transition-all duration-300">
+
+  <!-- BARRA DE ACESSIBILIDADE (ECO-MODE) -->
+  <div class="bg-oceanBlue text-white py-2 px-4 sticky top-0 z-50 shadow-md">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span class="font-medium text-emerald-300">Escola do Campo Ilha Antonio Paulo Lopes</span>
+      </div>
+      <button onclick="toggleEcoMode()" id="ecoBtn" class="flex items-center gap-2 bg-emerald-700 hover:bg-emerald-600 text-white font-semibold py-1 px-3 rounded-full transition-all">
+        <i class="fa-solid fa-leaf"></i>
+        <span>Ativar Modo Eco (Internet Lenta)</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <header class="relative bg-gradient-to-b from-oceanBlue to-cyan-900 text-white py-16 px-6 text-center overflow-hidden eco-bg-glow">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fef3c7_1px,transparent_1px)] [background-size:16px_16px] eco-hide"></div>
+    <div class="max-w-4xl mx-auto relative z-10">
+      <span class="bg-amber-400 text-slate-900 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block shadow-sm">
+        Projeto Agrinho 2026
+      </span>
+      <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-4 text-amber-100">
+        Marés de Transformação
+      </h1>
+      <p class="text-base sm:text-lg md:text-xl text-slate-200 font-light max-w-2xl mx-auto mb-6">
+        A biodiversidade e a sabedoria caiçara como fontes de sustentabilidade e renda alternativa nos Polos de <span class="text-amber-200 font-medium">Piaçaguera</span> e <span class="text-amber-200 font-medium">Amparo</span>.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="#culinaria" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3 rounded-lg shadow-lg transition-all text-sm flex items-center gap-2">
+          <i class="fa-solid fa-utensils"></i> Conhecer a Cambira
+        </a>
+        <a href="#defeso" class="bg-transparent hover:bg-white/10 border border-white/30 text-white font-medium px-6 py-3 rounded-lg transition-all text-sm flex items-center gap-2">
+          <i class="fa-solid fa-calendar-days"></i> Calendário Ecológico
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEÇÃO DE APRESENTAÇÃO DA REALIDADE LOCAL -->
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-12 gap-8 items-center bg-white rounded-2xl p-6 sm:p-10 shadow-sm border border-amber-100">
+      <div class="md:col-span-7">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-oceanBlue mb-4">
+          Ir além da pesca, preservando a identidade.
+        </h2>
+        <p class="text-slate-600 mb-4 leading-relaxed text-sm sm:text-base">
+          Nas ilhas de <strong>Piaçaguera</strong> e <strong>Amparo</strong>, o ecossistema estuarino e a pesca artesanal sustentam famílias há gerações. Porém, quando a temporada de pesca está baixa ou durante os períodos de defeso ecológico, a vulnerabilidade social aumenta.
+        </p>
+        <p class="text-slate-600 mb-6 leading-relaxed text-sm sm:text-base">
+          Este portal busca ser uma ferramenta viva para as comunidades locais e visitantes, demonstrando que o conhecimento caiçara é capaz de gerar renda inovadora, transformando produtos simples em experiências de alto valor ecológico e gastronômico.
+        </p>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="border-l-4 border-emerald-600 pl-3">
+            <h4 class="text-xl font-bold text-emerald-800">100%</h4>
+            <p class="text-xs text-slate-500 uppercase">Comunitário e Ecológico</p>
+          </div>
+          <div class="border-l-4 border-amber-500 pl-3">
+            <h4 class="text-xl font-bold text-amber-700">Piaçaguera & Amparo</h4>
+            <p class="text-xs text-slate-500 uppercase">Focos do Agrinho</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Box Interativo de Renda Alternativa -->
+      <div class="md:col-span-5 bg-gradient-to-br from-emerald-800 to-emerald-950 text-white rounded-xl p-6 shadow-md relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-emerald-700/30 rounded-full eco-hide"></div>
+        <h3 class="font-serif text-xl font-bold mb-4 text-amber-200">Simulador de Renda Local</h3>
+        <p class="text-xs text-slate-200 mb-4">Veja como uma atividade extra pode diversificar a economia de uma família na ilha durante o defeso:</p>
+        
+        <!-- Formulário dinâmico simples -->
+        <div class="space-y-4">
+          <div>
+            <label class="block text-xs uppercase font-semibold mb-1 text-slate-300">Atividade Seletiva:</label>
+            <select id="simuAtividade" onchange="calcularRenda()" class="w-full bg-emerald-900/60 text-white border border-emerald-700 rounded-lg p-2 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400">
+              <option value="cambira">Venda de Cambira Pronta (kg)</option>
+              <option value="oficina">Oficina Gastronômica para Turistas</option>
+              <option value="guiamento">Passeio Guiado de Canoa/Barco</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs uppercase font-semibold mb-1 text-slate-300" id="quantidadeLabel">Quantidade vendida/atendida no mês:</label>
+            <input type="number" id="simuQtd" value="10" min="1" oninput="calcularRenda()" class="w-full bg-emerald-900/60 text-white border border-emerald-700 rounded-lg p-2 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400">
+          </div>
+          <div class="bg-emerald-900/40 p-3 rounded-lg border border-emerald-700/50 flex justify-between items-center">
+            <span class="text-xs text-emerald-300">Renda Complementar Estimada:</span>
+            <span id="simuResultado" class="text-xl font-bold text-amber-200">R$ 500,00</span>
+          </div>
+          <p class="text-[10px] text-emerald-300 italic text-center">*Valores baseados em médias sugeridas por cooperativas caiçaras locais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DA CULINÁRIA (CAMBIRA) - COM A IMAGEM -->
+  
+
+         <section id="culinaria" class="secao-especifica">
+    <div class="container-especifico">
+        <h2>Sabores de Piaçaguera & Amparo: A Cambira</h2>
+        <p class="subtitulo">Aprenda a técnica ancestral de defumação que conserva o peixe e cria um produto de alto valor para venda.</p>
+        
+        <div class="bloco-culinaria">
+            <div class="coluna-imagem-defumacao">
+                <img src="gambira-defumada.jpg" alt="Representação da defumação tradicional caiçara: peixes Tainha amarrados com cipó e pendurados sobre fogueira em rancho rústico na Ilha de Piaçaguera" class="imagem-gambira">
+            </div>
+
+            <div class="coluna-passos-renda">
+                <div class="caixa-passos">
+                    <h3>Como preparar e vender</h3>
+                    <ol class="lista-passos">
+                        <li><strong>O Preparo:</strong> Limpe o peixe (Tainha ou Robalo), salgue levemente e amarre firme com cipó nativo (como na imagem).</li>
+                        <li><strong>A Defumação:</strong> Pendure no moquém (estrutura de madeira) sobre fogo baixo e fumaça de madeiras locais (como mangue) por 4 a 6 horas.</li>
+                        <li><strong>A Venda:</strong> A Cambira defumada tem sabor único e dura muito mais. Embale a vácuo ou em papel pardo e venda para turistas ou restaurantes de Paranaguá por até 3x o preço do peixe fresco!</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .secao-especifica {
+        padding: 4rem 1rem;
+        background-color: #fff;
+    }
+    .container-especifico {
+        max-width: 1100px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .subtitulo {
+        color: #64748b;
+        margin-bottom: 3rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .bloco-culinaria {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+        text-align: left;
+    }
+    .coluna-imagem-defumacao .imagem-gambira {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        display: block; /* Garante que ela ocupe espaço */
+    }
+    .caixa-passos {
+        background-color: #f8fafc;
+        padding: 2rem;
+        border-radius: 12px;
+        border-left: 5px solid #eab308; /* Cor dourada da culinária */
+    }
+    .caixa-passos h3 {
+        margin-top: 0;
+        color: #1e293b;
+    }
+    .lista-passos {
+        padding-left: 1.2rem;
+        color: #475569;
+    }
+    .lista-passos li {
+        margin-bottom: 1rem;
+    }
+
+    /* Responsividade para celular */
+    @media (max-width: 768px) {
+        .bloco-culinaria {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+  <!-- CALENDÁRIO INTERATIVO DO DEFESO E SUSTENTABILIDADE -->
+  <section id="defeso" class="max-w-6xl mx-auto px-4 py-16">
+    <div class="text-center mb-10">
+      <span class="text-emerald-700 text-xs font-bold uppercase tracking-widest">Educação Ambiental</span>
+      <h2 class="font-serif text-3xl font-bold text-oceanBlue mt-1">Calendário Ecológico Interativo</h2>
+      <p class="text-slate-600 text-sm sm:text-base max-w-lg mx-auto mt-2">
+        A sustentabilidade protege a biodiversidade. Clique nos meses para descobrir o status da pesca local e quais alternativas de renda estão ativas!
+      </p>
+    </div>
+
+    <!-- Meses em Grade de Botões -->
+    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 sm:gap-3 mb-8">
+      <button onclick="selecionarMes(1)" id="btnMes1" class="py-3 px-2 rounded-xl text-xs sm:text-sm font-semibold transition-all border border-slate-200 bg-white hover:border-oceanBlue">Janeiro</button>
+      <button onclick="selecionarMes(2)" id="btnMes2" class="py-3 px-2 rounded-xl text-xs sm:text-sm font-semibold transition-all border border-slate-200 bg-white hover:border-oceanBlue">Fevereiro</button>
+      <button onclick="selecionarMes(3)" id="btnMes3" class="py-3 px-2 rounded-xl text-xs sm:text-sm font-semibold transition-all border border-slate-200 bg-white hover:border-oceanBlue">Março</button>
+      <button onclick="selecionarMes(4)" id="btnMes4" class="py-3 px-2 rounded-xl text-xs sm:text-sm font-semibold transition-all border border-slate-200 bg-white hover:border-oceanBlue">Abril</button>
+      <button onclick="selecionarMes(5)" id="btnMes5" class="py-3 px-2 rounded-xl text-xs sm:text-sm font-semibold transition-all border border-slate-200 bg-white hover:border-oceanBlue">Maio</button>
+      <button onclick="selecionarMes(6)" id="btnMes6" class="py-3 px-2 rounded-xl text-xs sm:text-sm font-semibold transition-all border border-slate-200 bg-white hover:border-oceanBlue">Junho</button>
+      <button onclick="selecionarMes(7)" id="btnMes7" class="py-3 px-2 rounded-xl text-xs sm:text-sm font-semibold transition-all border border-slate-200 bg-white hover:border-oceanBlue">Julho</button>
+      <button onclick="selecionarMes(8)" id="btnMes8" class="py-3 px-2 rounded-xl text-xs sm:text-sm font-semibold transition-all border border-slate-200 bg-white hover:border-oceanBlue">Agosto</button>
+      <button onclick="selecionarMes(9)" id="btnMes9" class="py-3 px-2 rounded-xl text-xs sm:text-sm font-semibold transition-all border border-slate-200 bg-white hover:border-oceanBlue">Setembro</button>
+      <button onclick="selecionarMes(10)" id="btnMes10" class="py-3 px-2 rounded-xl text-xs sm:text-sm font-semibold transition-all border border-slate-200 bg-white hover:border-oceanBlue">Outubro</button>
+      <button onclick="selecionarMes(11)" id="btnMes11" class="py-3 px-2 rounded-xl text-xs sm:text-sm font-semibold transition-all border border-slate-200 bg-white hover:border-oceanBlue">Novembro</button>
+      <button onclick="selecionarMes(12)" id="btnMes12" class="py-3 px-2 rounded-xl text-xs sm:text-sm font-semibold transition-all border border-slate-200 bg-white hover:border-oceanBlue">Dezembro</button>
+    </div>
+
+    <!-- Detalhe do Mês Selecionado -->
+    <div id="painelMes" class="bg-gradient-to-r from-cyan-900 to-oceanBlue text-white rounded-2xl p-6 sm:p-8 shadow-lg transition-all duration-300">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-white/20 pb-4 mb-6 gap-3">
+        <div>
+          <span id="labelEstacao" class="text-xs uppercase font-bold text-amber-300 tracking-wider">Época Quente</span>
+          <h3 id="nomeMes" class="font-serif text-2xl sm:text-3xl font-bold">Janeiro</h3>
+        </div>
+        <div id="statusPesca" class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-4 py-1.5 rounded-full text-xs font-semibold flex items-center gap-2">
+          <i class="fa-solid fa-circle-check"></i> Pesca Liberada
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h4 class="font-semibold text-amber-200 flex items-center gap-2 mb-3 text-sm sm:text-base">
+            <i class="fa-solid fa-circle-info"></i> Comportamento Ecológico
+          </h4>
+          <p id="descEcologia" class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Período favorável para espécies costeiras de calor. Boa circulação de correntes na Baía.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-amber-200 flex items-center gap-2 mb-3 text-sm sm:text-base">
+            <i class="fa-solid fa-coins"></i> Oportunidade Econômica Alternativa
+          </h4>
+          <p id="descAlternativa" class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Excelente fluxo de turismo nas ilhas. Ótima oportunidade para oferecer as Oficinas Gastronômicas de Cambira.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VITRINE DE PROJETOS E HISTÓRIAS REAIS -->
+  <section class="bg-amber-100/40 py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <span class="text-oceanBlue text-xs font-bold uppercase tracking-widest">Escola do Campo na Prática</span>
+        <h2 class="font-serif text-3xl font-bold text-slate-900 mt-1">Protagonismo Estudantil</h2>
+        <p class="text-slate-600 text-sm sm:text-base max-w-xl mx-auto mt-2">
+          Como os estudantes dos polos Piaçaguera e Amparo estão conectando os conteúdos escolares com o desenvolvimento sustentável da comunidade.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Card de Projeto 1 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm flex flex-col justify-between p-6">
+          <div>
+            <div class="text-emerald-700 text-3xl mb-4"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3 class="font-serif text-lg font-bold text-slate-900 mb-2">Escola e Território</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+              Valorização curricular de Piaçaguera e Amparo. O saber dos mais velhos vira material de estudo nas aulas de ciências, história e geografia.
+            </p>
+          </div>
+          <span class="text-xs font-bold text-emerald-800 uppercase tracking-wider flex items-center gap-1">
+            <i class="fa-solid fa-check-double"></i> Metodologia Agrinho
+          </span>
+        </div>
+
+        <!-- Card de Projeto 2 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm flex flex-col justify-between p-6">
+          <div>
+            <div class="text-amber-600 text-3xl mb-4"><i class="fa-solid fa-leaf"></i></div>
+            <h3 class="font-serif text-lg font-bold text-slate-900 mb-2">Bioeconomia e Turismo</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+              Fomento à criação de roteiros integrados de turismo comunitário. Estudantes atuando como jovens monitores do ecossistema e herança caiçara.
+            </p>
+          </div>
+          <span class="text-xs font-bold text-amber-700 uppercase tracking-wider flex items-center gap-1">
+            <i class="fa-solid fa-check-double"></i> Prática Sustentável
+          </span>
+        </div>
+
+        <!-- Card de Projeto 3 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm flex flex-col justify-between p-6">
+          <div>
+            <div class="text-blue-700 text-3xl mb-4"><i class="fa-solid fa-shuttle-space"></i></div>
+            <h3 class="font-serif text-lg font-bold text-slate-900 mb-2">Inovação Digital Ecológica</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+              Uso de tecnologias de programação e web leves, permitindo a comunicação rápida das ilhas com o público exterior mesmo com baixa conectividade.
+            </p>
+          </div>
+          <span class="text-xs font-bold text-blue-800 uppercase tracking-wider flex items-center gap-1">
+            <i class="fa-solid fa-check-double"></i> Tecnologia Cidadã
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO / CRÉDITOS DO AGRINHO -->
+  <footer class="bg-slate-950 text-slate-400 py-12 px-6 border-t border-slate-900 text-center text-sm">
+    <div class="max-w-4xl mx-auto space-y-6">
+      <div class="flex justify-center gap-6 text-2xl text-slate-300">
+        <i class="fa-solid fa-anchor"></i>
+        <i class="fa-solid fa-seedling"></i>
+        <i class="fa-solid fa-fish"></i>
+      </div>
+      
+      <p class="max-w-xl mx-auto text-xs sm:text-sm leading-relaxed text-slate-400">
+        Desenvolvido como protótipo interativo para a participação no <strong>Programa Agrinho Paraná</strong>, representando os polos escolares da <strong>Ilha de Piaçaguera e Amparo</strong>.
+      </p>
+
+      <div class="pt-6 border-t border-slate-900 text-[10px] sm:text-xs text-slate-500">
+        &copy; 2026 Escola do Campo Ilha Antonio Paulo Lopes. Todos os direitos de sabedoria local reservados às comunidades tradicionais.
+      </div>
+    </div>
+  </footer>
+
+  <!-- LÓGICA DE PROGRAMAÇÃO INTERATIVA EM JAVASCRIPT -->
+  <script>
+    // 1. DADOS DOS MESES DO CALENDÁRIO
+    const dadosMeses = {
+      1: {
+        nome: "Janeiro",
+        estacao: "Alto Verão",
+        status: "Pesca Liberada",
+        statusCls: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+        ecologia: "Época quente que atrai cardumes próximos ao litoral e canais. Alta biodiversidade ativa na mata e estuário.",
+        alternativa: "Aproveite a alta do turismo de verão nas ilhas. Atividades de guiamento guiadas por canoa e venda de Cambira pronta para os turistas são ideais."
+      },
+      2: {
+        nome: "Fevereiro",
+        estacao: "Verão",
+        status: "Pesca Liberada",
+        statusCls: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+        ecologia: "Meses de temperaturas altas. Período favorável para a observação da fauna silvestre na trilha de Piaçaguera.",
+        alternativa: "Comercialização de doces locais de banana da terra e conservas de peixe seco defumado para os visitantes de carnaval."
+      },
+      3: {
+        nome: "Março",
+        estacao: "Início do Outono",
+        status: "Defeso do Camarão",
+        statusCls: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+        ecologia: "Início do defeso nacional do camarão (sete-barbas e branco). A captura direcionada a estas espécies fica proibida para conservá-las.",
+        alternativa: "Substituir a venda do camarão por oficinas práticas sobre a história da Cambira de Piaçaguera e produção de artesanato sustentável de bambu/cipó."
+      },
+      4: {
+        nome: "Abril",
+        estacao: "Outono",
+        status: "Defeso do Camarão",
+        statusCls: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+        ecologia: "O ecossistema estuarino precisa de descanso para a recomposição da biomassa de crustáceos. Águas começam a esfriar de leve.",
+        alternativa: "Turismo comunitário histórico focado nos casarões e histórias de assombrações e lendas caiçaras da ilha do Amparo."
+      },
+      5: {
+        nome: "Maio",
+        estacao: "Outono / Frio",
+        status: "Pesca Liberada",
+        statusCls: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+        ecologia: "Chegada dos ventos frios do sul que favorecem a migração dos cardumes de Tainha pela nossa costa.",
+        alternativa: "Preparação dos materiais de salga e defumação. O início da temporada de Tainha garante a matéria prima para a melhor Cambira tradicional."
+      },
+      6: {
+        nome: "Junho",
+        estacao: "Inverno",
+        status: "Temporada da Tainha",
+        statusCls: "bg-blue-500/20 text-blue-300 border-blue-500/30",
+        ecologia: "Grande abundância de Tainha de passagem. A comunidade se mobiliza na pesca de cerco tradicional sustentável.",
+        alternativa: "Foco principal na pesca, mas com agregação de valor: defumar parte da captura excedentária com o cipó nativo, garantindo que o peixe se conserve por mais tempo e seja vendido por preços melhores futuramente."
+      },
+      7: {
+        nome: "Julho",
+        estacao: "Inverno",
+        status: "Temporada da Tainha",
+        statusCls: "bg-blue-500/20 text-blue-300 border-blue-500/30",
+        ecologia: "Águas frias. Período de excelente qualidade para a conservação e defumação rústica.",
+        alternativa: "Atendimento a roteiros escolares e de pesquisadores acadêmicos interessados no polo escolar da ilha de Piaçaguera."
+      },
+      8: {
+        nome: "Agosto",
+        estacao: "Fim do Inverno",
+        status: "Pesca Liberada",
+        statusCls: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+        ecologia: "Transição climática. Período de marés mais altas (maré de sizígia) que exige cuidado na navegação.",
+        alternativa: "Desenvolvimento de sabonetes artesanais, tinturas de plantas nativas e outras produções de quintal produtivo em Amparo."
+      },
+      9: {
+        nome: "Setembro",
+        estacao: "Início da Primavera",
+        status: "Pesca Liberada",
+        statusCls: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+        ecologia: "Renascimento da vegetação nativa das encostas. Ótima época para monitoramento de aves marinhas.",
+        alternativa: "Oficinas de culinária e fomento de parcerias com restaurantes continentais de Paranaguá para fornecer o peixe Cambira defumado."
+      },
+      10: {
+        nome: "Outubro",
+        estacao: "Primavera",
+        status: "Pesca Liberada",
+        statusCls: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+        ecologia: "Retorno gradativo das temperaturas quentes. Fim do inverno estuarino.",
+        alternativa: "Capacitação local em marketing e mídias sociais para os jovens compartilharem as receitas caiçaras na internet."
+      },
+      11: {
+        nome: "Novembro",
+        estacao: "Primavera / Calor",
+        status: "Pesca Liberada",
+        statusCls: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+        ecologia: "Alta atividade de sementes e frutas nativas. Ciclos reprodutivos das florestas de manguezal.",
+        alternativa: "Passeios de caiaque ecológico no manguezal e workshops de gastronomia sustentável com ostras nativas."
+      },
+      12: {
+        nome: "Dezembro",
+        estacao: "Verão",
+        status: "Pesca Liberada",
+        statusCls: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+        ecologia: "Início oficial da temporada de chuvas quentes de verão que estimula a produtividade primária no estuário.",
+        alternativa: "Abertura dos restaurantes familiares na ilha. A Cambira cozida com banana da terra torna-se o prato mais procurado do fim de ano."
+      }
+    };
+
+    // Função para alterar as informações do calendário com base no mês selecionado
+    function selecionarMes(numeroMes) {
+      // Remover classe ativo de todos os botões de meses
+      for(let i=1; i<=12; i++) {
+        document.getElementById(`btnMes${i}`).classList.remove('bg-oceanBlue', 'text-white', 'border-oceanBlue');
+        document.getElementById(`btnMes${i}`).classList.add('bg-white', 'text-slate-800');
+      }
+
+      // Adicionar classes ao botão selecionado
+      const btn = document.getElementById(`btnMes${numeroMes}`);
+      btn.classList.add('bg-oceanBlue', 'text-white', 'border-oceanBlue');
+
+      // Obter dados correspondentes
+      const dados = dadosMeses[numeroMes];
+
+      // Atualizar o painel HTML
+      document.getElementById('nomeMes').innerText = dados.nome;
+      document.getElementById('labelEstacao').innerText = dados.estacao;
+      document.getElementById('descEcologia').innerText = dados.ecologia;
+      document.getElementById('descAlternativa').innerText = dados.alternativa;
+
+      // Status da Pesca
+      const statusElement = document.getElementById('statusPesca');
+      statusElement.className = `${dados.statusCls} px-4 py-1.5 rounded-full text-xs font-semibold flex items-center gap-2 transition-all`;
+      statusElement.innerHTML = `<i class="fa-solid fa-circle-check"></i> ${dados.status}`;
+    }
+
+    // Inicializar o mês corrente como Janeiro ao carregar a página
+    window.onload = function() {
+      selecionarMes(1);
+      calcularRenda();
+    };
+
+    // 2. SIMULADOR DE RENDA ADICIONAL CAIÇARA
+    function calcularRenda() {
+      const atividade = document.getElementById('simuAtividade').value;
+      const qtdInput = document.getElementById('simuQtd');
+      const label = document.getElementById('quantidadeLabel');
+      let qtd = parseFloat(qtdInput.value) || 0;
+      
+      let precoUnitario = 0;
+      let unidade = "";
+
+      if (atividade === "cambira") {
+        precoUnitario = 50.00; // R$ 50 o kg de cambira de qualidade salgada
+        label.innerText = "Quantidade vendida no mês (kg):";
+        unidade = " kg";
+      } else if (atividade === "oficina") {
+        precoUnitario = 120.00; // R$ 120 por participante na vivência caiçara
+        label.innerText = "Número de participantes atendidos:";
+        unidade = " turistas";
+      } else if (atividade === "guiamento") {
+        precoUnitario = 150.00; // R$ 150 por barco/passeio exclusivo guiado
+        label.innerText = "Número de passeios realizados no mês:";
+        unidade = " passeios";
+      }
+
+      const total = qtd * precoUnitario;
+      
+      // Formatação brasileira de moeda
+      document.getElementById('simuResultado').innerText = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    }
+
+    // 3. MODO ECO-MODE PARA SINAL RUIM DE INTERNET NAS ILHAS
+    function toggleEcoMode() {
+      const body = document.body;
+      const mainImage = document.getElementById('mainImage');
+      const ecoOverlay = document.getElementById('ecoOverlay');
+      const btn = document.getElementById('ecoBtn');
+
+      if (body.classList.contains('eco-mode')) {
+        // Desativa o modo econômico
+        body.classList.remove('eco-mode');
+        mainImage.classList.remove('hidden');
+        ecoOverlay.classList.add('hidden');
+        btn.classList.remove('bg-amber-500', 'text-slate-900');
+        btn.classList.add('bg-emerald-700', 'text-white');
+        btn.querySelector('span').innerText = "Ativar Modo Eco (Internet Lenta)";
+      } else {
+        // Ativa o modo econômico (pula carregamentos de imagem e sombras complexas)
+        body.classList.add('eco-mode');
+        mainImage.classList.add('hidden');
+        ecoOverlay.classList.remove('hidden');
+        btn.classList.remove('bg-emerald-700', 'text-white');
+        btn.classList.add('bg-amber-500', 'text-slate-900');
+        btn.querySelector('span').innerText = "Modo Econômico Ativado";
+      }
+    }
+  </script>
+</body>
+</html>
